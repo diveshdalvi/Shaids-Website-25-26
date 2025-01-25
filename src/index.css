@@ -24,5 +24,27 @@
 }
 
 .custom-input {
-  @apply border border-[#455668] bg-[#121427] rounded-lg py-2;
+  @apply border border-[#455668] bg-[#121427] rounded-lg py-2 transition-all;
+}
+
+.custom-input:focus-within {
+  @apply border-[#3B82F6];
+}
+
+.custom-input.error {
+  @apply border-red-500;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #121427 inset !important;
+  -webkit-text-fill-color: white !important;
 }
