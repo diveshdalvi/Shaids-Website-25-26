@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Sahil Jadhav",
+    "designation": "President",
+    "instagramUrl": "https://www.instagram.com/_.sahil4565_/",
+    "linkedinUrl": "https://www.linkedin.com/in/sahil-jadhav-49b318289/",
+    "avatar": "./src/assets/images/team-members-24-25/sahil-jadhav-president.jpg"
+  },
+  {
+    "name": "Raj Sangle",
+    "designation": "General Secretary",
+    "instagramUrl": "https://www.instagram.com/orewa_rrraaj/",
+    "linkedinUrl": "https://www.linkedin.com/in/raj-sangle-2257a9273/",
+    "avatar": "./src/assets/images/team-members-24-25/raj-sangle-general-secretary.jpg"
+  },
+  {
+    "name": "Siddhi Kambli",
+    "designation": "Co-General Secretary",
+    "instagramUrl": "https://www.instagram.com/siddhikambli09/",
+    "linkedinUrl": "https://www.linkedin.com/in/siddhi-kambli-987a40304/",
+    "avatar": "./src/assets/images/team-members-24-25/siddhi-kambli-co-general-secretary.png"
+  },
+  {
+    "name": "Sadashiv Sawant",
+    "designation": "Treasurer",
+    "instagramUrl": "https://www.instagram.com/wayne_sawant_69_/",
+    "linkedinUrl": "https://www.linkedin.com/in/sadashiv-sawant-351707229/",
+    "avatar": "./src/assets/images/team-members-24-25/sadashiv-sawant-treasurer.jpg"
+  },
+  {
+    "name": "Samruddhi Naralkar",
+    "designation": "Convener",
+    "instagramUrl": "https://www.instagram.com/naralkarsamruddhi/",
+    "linkedinUrl": "https://in.linkedin.com/in/samruddhi-naralkar-a9a422288/",
+    "avatar": "./src/assets/images/team-members-24-25/samruddhi-naralkar-convener.jpg"
+  },
+  {
+    "name": "Ayush Bhosale",
+    "designation": "Tech Head",
+    "instagramUrl": "https://www.instagram.com/ayush._.bhosale/",
+    "linkedinUrl": "https://www.linkedin.com/in/aryan-gawade-9476a831b/",
+    "avatar": "./src/assets/images/team-members-24-25/ayush-bhosale-tech-head.jpg"
+  },
+  {
+    "name": "Aryan Gawade",
+    "designation": "Graphics Head",
+    "instagramUrl": "https://www.instagram.com/ayush._.bhosale/",
+    "linkedinUrl": "https://www.linkedin.com/in/aryan-gawade-9476a831b/",
+    "avatar": "./src/assets/images/team-members-24-25/aryan-gawade-graphics-head.jpg"
+  },
+  {
+    "name": "Rutuja Wavdhane",
+    "designation": "Planning Head",
+    "instagramUrl": "https://www.instagram.com/rutwa_24/",
+    "linkedinUrl": "https://www.linkedin.com/in/rutuja-wavdhane-630790301/",
+    "avatar": "./src/assets/images/team-members-24-25/rutuja-wavdhane-publicity-head.jpg"
+  },
+  {
+    "name": "Anushka Jagadale",
+    "designation": "Publicity Head",
+    "instagramUrl": "https://www.instagram.com/anuxcr/",
+    "linkedinUrl": "https://www.linkedin.com/in/anushka-jagadale-0636a5299/",
+    "avatar": "./src/assets/images/team-members-24-25/anushka-jagadale-publicity-head.jpg"
+  },
+  {
+    "name": "Shraddha Nimunkar",
+    "designation": "Cultural Head",
+    "instagramUrl": "https://www.instagram.com/_shraddha.9__/",
+    "linkedinUrl": "https://www.linkedin.com/in/shraddha-nimunkar-1948862b8/",
+    "avatar": "./src/assets/images/team-members-24-25/shraddha-nimunkar-cultural-head.jpg"
+  },
+  {
+    "name": "Piyush Dokle",
+    "designation": "Social Media Head",
+    "instagramUrl": "https://www.instagram.com/stranger.deb/",
+    "linkedinUrl": "https://www.linkedin.com/in/piyush-dokle-970684284/",
+    "avatar": "./src/assets/images/team-members-24-25/piyush-dokle-social-media-head.jpg"
+  },
+  {
+    "name": "Rishita Chavan",
+    "designation": "Sports Head",
+    "instagramUrl": "https://www.instagram.com/rishi_ta__28/",
+    "linkedinUrl": "https://www.linkedin.com/in/rishita-chavan-353978299/",
+    "avatar": "./src/assets/images/team-members-24-25/rishita-chavan-sports-head.jpg"
+  },
+  {
+    "name": "Sairaj Unde",
+    "designation": "Sports Head",
+    "instagramUrl": "https://www.instagram.com/saiii_20_/",
+    "linkedinUrl": "https://www.linkedin.com/in/sairaj-unde-87a39031b/",
+    "avatar": "./src/assets/images/team-members-24-25/sairaj-unde-sports-head.jpg"
+  },
+  {
+    "name": "Anuj Jadhav",
+    "designation": "Documentation Head",
+    "instagramUrl": "https://www.instagram.com/anujjj_j/",
+    "linkedinUrl": "https://www.linkedin.com/in/anuj-jadhav-39a51328a/",
+    "avatar": "./src/assets/images/team-members-24-25/anush-jadhav-documentation-head.jpg"
+  },
+  {
+    "name": "Nimisha Patil",
+    "designation": "Documentation Head",
+    "instagramUrl": "https://www.instagram.com/nimishapatil_1311/",
+    "linkedinUrl": "https://www.linkedin.com/in/nimisha-patil-911777301/",
+    "avatar": "./src/assets/images/team-members-24-25/nimisha-patil-documentation-head.jpg"
+  },
+  {
+    "name": "Mandar Salvi",
+    "designation": "Sponsorship Head",
+    "instagramUrl": "https://www.instagram.com/mandarsalvi03/",
+    "linkedinUrl": "https://www.linkedin.com/in/mandarsalvi03/",
+    "avatar": "./src/assets/images/team-members-24-25/mandar-salvi-sponsorship-head.jpg"
+  },
+  {
+    "name": "Bhumika Bandkar",
+    "designation": "Sponsorship Head",
+    "instagramUrl": "https://www.instagram.com/bhumiikaaa_02/",
+    "linkedinUrl": "https://www.linkedin.com/in/bhumikabandkar/",
+    "avatar": "./src/assets/images/team-members-24-25/bhumika-bandkar-sponsorship-head.png"
+  }
+]
