@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Lottie from "lottie-react";
+import Footer from "../components/Common/Footer"; // Importing Footer component
 import MemberCard from "../components/Teams/MemberCard";
 import currentTeamMembers from "../data/leads-24-25.json";
 import previousLeads from "../data/leads-23-24.json";
@@ -15,13 +16,13 @@ const Team = () => {
   const teamMembers = showPreviousLeads ? previousLeads : currentTeamMembers;
 
   return (
-    <div className="min-h-screen bg-[#0A051E] py-20 px-4 flex flex-col items-center">
-      <div className="max-w-[1100px] w-full px-4"> {/* Added px-4 to match all content */}
+    <div className="min-h-screen flex flex-col bg-[#0A051E]">
+      <div className="max-w-[1100px] w-full px-4 mx-auto flex flex-col items-center flex-grow"> {/* Ensures content stretches and footer stays at bottom */}
 
         <div className="w-full flex flex-col lg:flex-row items-center justify-between mb-12">
           
-          {/* Title & Subtitle (Aligned to Cards) */}s
-          <div className="lg:w-[50%] text-center lg:text-left">
+          {/* Title & Subtitle (Aligned to Cards) */}
+          <div className="lg:w-[50%] text-center lg:text-left py-8">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-2 font-NordMedium">
               MEET THE <br className="hidden lg:block" />
               <span className="text-[#5D3E98]">TEAM!</span>
@@ -52,15 +53,16 @@ const Team = () => {
         </div>
 
         {/* Leads Button (Aligned to Grid Width) */}
-        <div className="w-full flex mt-12 justify-center">
+        <div className="w-full flex mt-12 mb-12 justify-center">
           <button
             onClick={handleToggleLeads}
-            className="bg-buttonGradient px-6 py-2 rounded-lg text-white font-Outfits text-center"
+            className="bg-buttonGradient px-6 py-2 rounded-lg text-white font-Outfit text-center"
           >
             {showPreviousLeads ? "Leads of AY 2024-25" : "Leads of AY 2023-24"}
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
