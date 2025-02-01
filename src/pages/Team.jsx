@@ -5,6 +5,7 @@ import MemberCard from "../components/Teams/MemberCard";
 import currentTeamMembers from "../data/leads-24-25.json";
 import previousLeads from "../data/leads-23-24.json";
 import teamAnimation from "../assets/animations/team/team-animation.json";
+import Navbar from "../components/Common/Navbar";
 
 const Team = () => {
   const [showPreviousLeads, setShowPreviousLeads] = useState(false);
@@ -16,11 +17,12 @@ const Team = () => {
   const teamMembers = showPreviousLeads ? previousLeads : currentTeamMembers;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A051E]">
-      <div className="max-w-[1100px] w-full px-4 mx-auto flex flex-col items-center flex-grow"> {/* Ensures content stretches and footer stays at bottom */}
-
+    <div className="min-h-screen flex flex-col bg-[#0A051E] ">
+      <Navbar />
+      <div className="max-w-[1100px] w-full px-4 mx-auto flex flex-col items-center flex-grow mt-5">
+        {" "}
+        {/* Ensures content stretches and footer stays at bottom */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-between mb-12">
-          
           {/* Title & Subtitle (Aligned to Cards) */}
           <div className="lg:w-[50%] text-center lg:text-left py-8">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-2 font-NordMedium">
@@ -34,10 +36,13 @@ const Team = () => {
 
           {/* Lottie Animation (Aligned to Grid End) */}
           <div className="lg:w-[50%] flex justify-center lg:justify-end">
-            <Lottie animationData={teamAnimation} loop={true} className="w-[250px] lg:w-[300px] h-[200px] lg:h-[250px]" />
+            <Lottie
+              animationData={teamAnimation}
+              loop={true}
+              className="w-[250px] lg:w-[300px] h-[200px] lg:h-[250px]"
+            />
           </div>
         </div>
-
         {/* Team Members Grid (Now Properly Aligned) */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
@@ -51,7 +56,6 @@ const Team = () => {
             />
           ))}
         </div>
-
         {/* Leads Button (Aligned to Grid Width) */}
         <div className="w-full flex mt-12 mb-12 justify-center">
           <button
