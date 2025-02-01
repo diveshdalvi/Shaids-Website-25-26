@@ -17,21 +17,21 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="text-right mt-8 md:mt-0 px-32">
-          <h3 className="text-base font-lg font-Outfit">DATTA MEGHE COLLEGE OF ENGINEERING</h3>
-          <p className="text-xs">
+        <div className="text-base font-lg text-right mt-8 md:mt-0 px-32 font-Outfit">
+          <h3 className=" font-Outfit">DATTA MEGHE COLLEGE OF ENGINEERING</h3>
+          <p>
             SEC-3, AIROLI, NAVI MUMBAI<br />
             MAHARASHTRA - 400708, INDIA
           </p>
           {/* Social Icons */}
           <div className="flex space-x-4 mt-3 justify-center md:justify-end">
-            <a href="#" className="text-pink-400 hover:text-pink-500 text-xl">
+            <a href="https://www.instagram.com/dmceairoli.official/" className="text-pink-400 hover:text-pink-500 text-xl">
               <Instagram />
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500 text-xl">
+            <a href="https://github.com/SHAIDS-DMCE" className="text-gray-400 hover:text-gray-500 text-xl">
               <GitHub />
             </a>
-            <a href="#" className="text-blue-500 hover:text-blue-600 text-xl">
+            <a href="https://www.linkedin.com/company/shaids-dmce/" className="text-blue-500 hover:text-blue-600 text-xl">
               <LinkedIn />
             </a>
           </div>
