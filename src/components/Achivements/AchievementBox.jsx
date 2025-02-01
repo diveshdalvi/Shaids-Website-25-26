@@ -6,11 +6,11 @@ const AchievementBox = ({
   achievementimg,
 }) => {
   return (
-    <div className={`bg-[#4B2F8A] text-white p-2 rounded-2xl  w-4/5 `}>
+    <div className={`bg-[#4B2F8A] text-white p-2 rounded-2xl  w-full `}>
       <img
         src={achievementimg}
         alt="img"
-        className=" w-full   rounded-md self-center "
+        className=" size-28  aspect-video   rounded-md self-center "
       />
       <div className=" flex justify-between items-center gap-2 pr-2">
         <div className=" flex flex-col gap-2 ">

@@ -1,48 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import AchievementBox from "../components/Achivements/AchievementBox";
 import achievements from "../data/data";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const Achievements = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+  const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide index
+
+  const [sliderRef] = useKeenSlider({
+    slides: {
+      perView: 3, // Display 3 slides at a time
+      spacing: 1, // Space between slides
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+    loop: true,
+    centered: true, // Center the active slide
+    slideChanged(s) {
+      setCurrentSlide(s.track.details.rel); // Update the current slide index
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  });
 
   return (
-    <div className="bg-bgGradient flex flex-col justify-center min-h-screen h-full ">
+    <div className="bg-bgGradient flex flex-col justify-center min-h-screen h-full">
+      {/* Header Section */}
       <div className="p-10 pb-5">
-        {/* for mobile device */}
-        <div className="flex flex-col items-center gap-12 sm:hidden justify-center mb-10">
+        {/* Mobile View */}
+        <div className="flex flex-col items-center gap-8 sm:hidden mb-10">
           <h1 className="text-white text-3xl font-NordBold">Achievements</h1>
           <img
-            src="src/assets/images/achievements_page.png"
-            alt="img"
-            className="size-auto scale-125"
+            src="/assets/images/achievements_page.png"
+            alt="Achievements Illustration"
+            className="w-64 h-auto"
           />
           <p className="text-[#A576DF] text-center text-lg font-Outfit font-semibold">
             Our college celebrates top academic rankings, innovative research,
             and impactful community service. We’re proud of our students!
           </p>
         </div>
-        {/* for tablets & desktops */}
-        <div className="sm:flex items-center gap-12 hidden p-10 mb-12 justify-center ">
-          <div className="flex flex-col gap-4">
+
+        {/* Tablet & Desktop View */}
+        <div className="hidden sm:flex items-center gap-12 p-10 mb-12">
+          <div className="flex flex-col gap-4 max-w-lg">
             <h1 className="text-white text-5xl 2xl:text-6xl font-NordBold">
               Achievements
             </h1>
@@ -52,36 +49,34 @@ const Achievements = () => {
             </p>
           </div>
           <img
-            src="src/assets/images/achievements_page.png"
-            alt="img"
-            className="size-auto scale-125 2xl:scale-150"
+            src="/assets/images/achievements_page.png"
+            alt="Achievements Illustration"
+            className="w-80 h-auto 2xl:w-96"
           />
         </div>
       </div>
 
+      {/* Keen Slider Section */}
       <div className="py-4 w-full">
-        <Carousel
-          responsive={responsive}
-          containerClass="w-full"
-          itemClass="flex justify-center"
-          className="overflow-hidden"
-        >
-          {Object.keys(achievements).map((key, index) => {
-            return (
-              <div
-                key={index}
-                className="flex justify-center items-center w-full "
-              >
-                <AchievementBox
-                  achievementname={achievements[key].title}
-                  achievementdesc={achievements[key].description}
-                  achievementimg={achievements[key].img}
-                  className="w-full max-w-[300px]"
-                />
-              </div>
-            );
-          })}
-        </Carousel>
+        <div ref={sliderRef} className="keen-slider">
+          {Object.keys(achievements).map((key, index) => (
+            <div
+              key={index}
+              className={`keen-slider__slide flex justify-center items-center ${
+                index === currentSlide
+                  ? "scale-105 z-10" // Larger scale for the active slide
+                  : "scale-20 opacity-75 " // Smaller and dimmer for surrounding slides
+              }`}
+            >
+              <AchievementBox
+                achievementname={achievements[key].title}
+                achievementdesc={achievements[key].description}
+                achievementimg={achievements[key].img}
+                className="w-full max-w-[300px] bg-purple-600 text-white rounded-lg p-4 shadow-md"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

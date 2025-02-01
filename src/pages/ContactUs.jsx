@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { set, useForm } from "react-hook-form";
-import toast, { Toaster } from "react-hot-toast";
+import toast, { Toaster, LoaderIcon } from "react-hot-toast";
 
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
+import axios from "axios";
 
 const ContactUs = () => {
   const {
@@ -14,22 +15,37 @@ const ContactUs = () => {
     formState: { errors },
   } = useForm();
 
-  const [loadinng, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [messageLength, setMessageLength] = useState(0);
   const maxLength = 300;
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setLoading(true);
-    // preventDefault();
-    reset();
-    toast.success("Sent Successfully!");
+    // console.log(data);
+    try {
+      const email = data.email;
+      const fullName = data.fullName;
+      const phoneNumber = data.phoneNumber;
+      const Message = data.Message;
+      await axios.post(
+        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api/contact",
+        { fullName, email, phoneNumber, Message }
+      );
+      reset();
+      toast.success("Sent Successfully!");
+    } catch (e) {
+      console.log(e);
+      toast.error("Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-full px-12 xl:flex-row justify-around items-center sm:px-32 py-24 xl:px-32 ">
+    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row justify-around items-center sm:px-32 py-24 xl:px-32 ">
       <Toaster position="top-right" reverseOrder={false} />
       {/* Top text box */}
       <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 sm:text-left xl:w-1/2">
-        <span className="bg-[#0148E0] rounded-3xl px-4 py-1 border w-max md:text-lg">
+        <span className="bg-buttonGradient rounded-lg px-4 py-1  w-max md:text-lg">
           Contact us
         </span>
         <h1 className="font-NordMedium text-2xl sm:text-4xl md:text-5xl">
@@ -159,11 +175,12 @@ const ContactUs = () => {
               </p>
             )}
           </span>
-
-          <input
-            type="submit"
+          <button
             className=" bg-buttonGradient w-max px-4 py-1 rounded-lg self-end"
-          />
+            type="submit"
+          >
+            {loading ? <LoaderIcon /> : "Send"}
+          </button>
         </form>
       </div>
     </div>
