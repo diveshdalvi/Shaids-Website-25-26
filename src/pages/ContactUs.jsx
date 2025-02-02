@@ -42,7 +42,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row  items-center sm:px-32 py-24 xl:px-32 justify-between">
+    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row  items-center sm:px-32 py-24 xl:px-32 justify-between ">
       <Navbar/>
       <Toaster position="top-right" reverseOrder={false} />
       {/* Top text box */}
