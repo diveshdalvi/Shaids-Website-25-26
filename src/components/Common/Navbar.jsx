@@ -11,7 +11,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer text-white">
-          SHAIDS
+          <img
+            src="./src\assets\images\logo.svg"
+            alt="logo"
+            className=" size-3/4"
+          />
         </div>
 
         {/* Desktop Nav */}
@@ -20,10 +24,10 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="hover:text-purple-400">
-            <Link to="/about">About</Link>
+            <Link to="/achievements">Achievements</Link>
           </li>
           <li className="hover:text-purple-400">
-            <Link to="/services">Services</Link>
+            <Link to="/team">Team</Link>
           </li>
           <li className="hover:text-purple-400">
             <Link to="/contact-us">Contact</Link>
@@ -56,16 +60,24 @@ const Navbar = () => {
           {/* Mobile Menu Links */}
           <ul className="text-white text-2xl space-y-6 text-center">
             <li>
-              <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+              <Link to="/achievements" onClick={() => setIsOpen(false)}>
+                Achievements
+              </Link>
             </li>
             <li>
-              <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
+              <Link to="/team" onClick={() => setIsOpen(false)}>
+                Team
+              </Link>
             </li>
             <li>
-              <Link to="/contact-us" onClick={() => setIsOpen(false)}>Contact</Link>
+              <Link to="/contact-us" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

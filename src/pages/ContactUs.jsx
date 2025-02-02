@@ -6,6 +6,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import axios from "axios";
+import Navbar from "../components/Common/Navbar";
 
 const ContactUs = () => {
   const {
@@ -41,7 +42,8 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row justify-around items-center sm:px-32 py-24 xl:px-32 ">
+    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row  items-center sm:px-32 py-24 xl:px-32 justify-between">
+      <Navbar/>
       <Toaster position="top-right" reverseOrder={false} />
       {/* Top text box */}
       <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 sm:text-left xl:w-1/2">
