@@ -12,9 +12,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer text-white">
           <img
-            src="./src\assets\images\logo.svg"
+            src="./src/assets/images/logo.svg"
             alt="logo"
-            className=" size-3/4"
+            className="w-12 h-12"
           />
         </div>
 
@@ -43,45 +43,44 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (Glass Effect with Fade Transition) */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md flex flex-col items-center justify-center z-50 transition-opacity duration-500 opacity-100"
-          style={{ opacity: isOpen ? 1 : 0 }}
+      {/* Mobile Menu with Sliding Animation */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-60 backdrop-blur-lg transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-500 ease-in-out flex flex-col items-center justify-center z-50`}
+      >
+        {/* Close Button */}
+        <button
+          className="absolute top-6 right-6 text-white"
+          onClick={() => setIsOpen(false)}
         >
-          {/* Close Button */}
-          <button
-            className="absolute top-6 right-6 text-white"
-            onClick={() => setIsOpen(false)}
-          >
-            <CloseIcon fontSize="large" />
-          </button>
+          <CloseIcon fontSize="large" />
+        </button>
 
-          {/* Mobile Menu Links */}
-          <ul className="text-white text-2xl space-y-6 text-center">
-            <li>
-              <Link to="/" onClick={() => setIsOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/achievements" onClick={() => setIsOpen(false)}>
-                Achievements
-              </Link>
-            </li>
-            <li>
-              <Link to="/team" onClick={() => setIsOpen(false)}>
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact-us" onClick={() => setIsOpen(false)}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+        {/* Mobile Menu Links */}
+        <ul className="text-white text-2xl space-y-6 text-center">
+          <li className="hover:text-purple-400 transition duration-300">
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li className="hover:text-purple-400 transition duration-300">
+            <Link to="/achievements" onClick={() => setIsOpen(false)}>
+              Achievements
+            </Link>
+          </li>
+          <li className="hover:text-purple-400 transition duration-300">
+            <Link to="/team" onClick={() => setIsOpen(false)}>
+              Team
+            </Link>
+          </li>
+          <li className="hover:text-purple-400 transition duration-300">
+            <Link to="/contact-us" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

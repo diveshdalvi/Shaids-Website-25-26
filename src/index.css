@@ -89,3 +89,23 @@ body {
       pointer;
   }
 }
+
+/* Embla Carousel Container */
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.embla__slide {
+  flex: 0 0 100%; /* Each slide takes up full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+}

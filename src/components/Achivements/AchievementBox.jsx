@@ -1,15 +1,16 @@
 import React from "react";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const AchievementBox = ({ achievementname, achievementdesc, achievementimg }) => {
   return (
     <div className="bg-[#4B2F8A] text-white p-4 rounded-2xl w-full max-w-[320px] sm:max-w-[350px] flex flex-col items-center">
       {/* Image */}
-      <img
-        src={achievementimg}
-        alt="img"
-        className="w-full h-auto aspect-video rounded-md self-center"
-      />
+      <div className="w-full h-40 sm:h-48 overflow-hidden rounded-md">
+        <img
+          src={achievementimg}
+          alt="img"
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Text Content */}
       <div className="flex flex-col gap-2 text-center mt-3 w-full">
