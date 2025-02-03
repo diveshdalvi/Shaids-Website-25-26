@@ -19,7 +19,7 @@ const Team = () => {
   return (
     <div className="min-h-screen flex flex-col bg-bgGradient ">
       <Navbar />
-      <div className="max-w-[1100px] w-full px-4 mx-auto flex flex-col items-center flex-grow mt-5">
+      <div className="max-w-[1280px] w-full px-4 mx-auto flex flex-col items-center flex-grow mt-5">
         {" "}
         {/* Ensures content stretches and footer stays at bottom */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-between mb-12">
