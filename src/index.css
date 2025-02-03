@@ -109,3 +109,22 @@ body {
   padding: 16px;
   box-sizing: border-box;
 }
+
+/* Embla Carousel Container */
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  gap: 16px; /* Space between slides */
+  transition: transform 0.3s ease-in-out;
+}
+
+.embla__slide {
+  flex: 0 0 auto; /* Prevent slides from shrinking or growing */
+  transition: all 0.5s ease-in-out; /* Animation for width changes */
+  cursor: pointer;
+  border-radius: 16px;
+}

@@ -17,7 +17,7 @@ const Team = () => {
   const teamMembers = showPreviousLeads ? previousLeads : currentTeamMembers;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A051E] ">
+    <div className="min-h-screen flex flex-col bg-bgGradient ">
       <Navbar />
       <div className="max-w-[1100px] w-full px-4 mx-auto flex flex-col items-center flex-grow mt-5">
         {" "}

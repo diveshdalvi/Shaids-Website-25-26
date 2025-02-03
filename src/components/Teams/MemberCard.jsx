@@ -5,7 +5,7 @@ import Skeleton from "@mui/material/Skeleton";
 
 const MemberCard = ({ name, designation, instagramUrl, linkedinUrl, avatar, loading }) => {
   return (
-    <div className="bg-[#5D3E98] rounded-lg p-8 flex flex-col items-center shadow-[0_0_30px_rgba(93,62,152,0.3)] w-[75%] max-w-[250px] mx-auto font-Outfit">
+    <div className="bg-[#5D3E98] rounded-lg  flex flex-col items-center shadow-[0_0_30px_rgba(93,62,152,0.3)] px-8 py-10 w-full  max-w-[250px] mx-auto font-Outfit h-full">
       {/* Avatar */}
       <div className="bg-white rounded-full p-1 w-24 h-24 overflow-hidden mb-3">
         {loading ? (

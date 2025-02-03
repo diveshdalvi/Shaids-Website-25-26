@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-transparent fixed top-0 left-0 right-0 py-4 z-50">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <nav className="bg-transparent  py-3 ">
+      <div className="w-screen mx-auto  flex justify-between px-10 items-center">
         {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer text-white">
           <img

@@ -23,6 +23,30 @@ const achievements = {
       "Our college celebrates top academic rankings, innovative research, and impactful community service. We’re proud of our students !",
     img: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Morgan_Hall_of_Williams_College_in_the_fall_%2827_October_2010%29.jpg",
   },
+  5: {
+    title: "Achievements4",
+    description:
+      "Our college celebrates top academic rankings, innovative research, and impactful community service. We’re proud of our students !",
+    img: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Morgan_Hall_of_Williams_College_in_the_fall_%2827_October_2010%29.jpg",
+  },
+  6: {
+    title: "Achievements4",
+    description:
+      "Our college celebrates top academic rankings, innovative research, and impactful community service. We’re proud of our students !",
+    img: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Morgan_Hall_of_Williams_College_in_the_fall_%2827_October_2010%29.jpg",
+  },
+  7: {
+    title: "Achievements4",
+    description:
+      "Our college celebrates top academic rankings, innovative research, and impactful community service. We’re proud of our students !",
+    img: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Morgan_Hall_of_Williams_College_in_the_fall_%2827_October_2010%29.jpg",
+  },
+  8: {
+    title: "Achievements4",
+    description:
+      "Our college celebrates top academic rankings, innovative research, and impactful community service. We’re proud of our students !",
+    img: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Morgan_Hall_of_Williams_College_in_the_fall_%2827_October_2010%29.jpg",
+  },
 };
 
 
