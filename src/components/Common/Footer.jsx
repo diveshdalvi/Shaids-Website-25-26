@@ -5,26 +5,26 @@ const Footer = () => {
     <div className="w-full bg-[#2E0B52] text-white text-center"> {/* Outer div for full width */}
       <div className="px-4 max-w-16xl mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Section */}
-        <div className="text-left py-4 px-32">
+        <div className="text-left px-4 py-4">
           <div className="flex items-center space-x-3">
             <img src="./src/assets/images/logo.svg" alt="SHAIDS Logo" className="h-20 w-20"/>
             <h2 className="text-xl font-semibold">SHAIDS.</h2>
           </div>
-          <p className="mt-2 text-base font-Outfit ">
+          <p className="mt-2 mr-0 sm:mr-8 text-base font-Outfit ">
             Empowering DMCE in AI & Data Science<br />through innovation.<br />
             Join us in learning and collaboration.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="text-base font-lg text-right mt-8 md:mt-0 px-32 font-Outfit">
-          <h3 className=" font-Outfit">DATTA MEGHE COLLEGE OF ENGINEERING</h3>
+        <div className="text-base font-lg text-left mt-8 md:mt-16 px-8 font-Outfit">
+          <h3 className="font-Outfit">DATTA MEGHE COLLEGE OF ENGINEERING</h3>
           <p>
             SEC-3, AIROLI, NAVI MUMBAI<br />
             MAHARASHTRA - 400708, INDIA
           </p>
           {/* Social Icons */}
-          <div className="flex space-x-4 mt-3 justify-center md:justify-end">
+          <div className="flex space-x-4 mt-3 justify-start">
             <a href="https://www.instagram.com/dmceairoli.official/" className="text-pink-400 hover:text-pink-500 text-xl">
               <Instagram />
             </a>
