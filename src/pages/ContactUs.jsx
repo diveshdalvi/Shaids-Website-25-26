@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { set, useForm } from "react-hook-form";
-import toast, { Toaster, LoaderIcon } from "react-hot-toast";
-
+import toast, { Toaster } from "react-hot-toast";
+import Lottie from 'lottie-react';
+import contact from '../assets/images/contact.json'; 
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
-import axios from "axios";
-import Navbar from "../components/Common/Navbar";
 
 const ContactUs = () => {
   const {
@@ -16,39 +15,23 @@ const ContactUs = () => {
     formState: { errors },
   } = useForm();
 
-  const [loading, setLoading] = useState(false);
+  const [loadinng, setLoading] = useState(false);
   const [messageLength, setMessageLength] = useState(0);
   const maxLength = 300;
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     setLoading(true);
-    // console.log(data);
-    try {
-      const email = data.email;
-      const fullName = data.fullName;
-      const phoneNumber = data.phoneNumber;
-      const Message = data.Message;
-      await axios.post(
-        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api/contact",
-        { fullName, email, phoneNumber, Message }
-      );
-      reset();
-      toast.success("Sent Successfully!");
-    } catch (e) {
-      console.log(e);
-      toast.error("Something went wrong!");
-    } finally {
-      setLoading(false);
-    }
+    // preventDefault();
+    reset();
+    toast.success("Sent Successfully!");
   };
 
   return (
-    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-screen px-12 xl:flex-row  items-center sm:px-32 py-24 xl:px-32 justify-between ">
-      <Navbar/>
+    <div className="bg-bgGradient text-white font-Outfit flex flex-col min-h-screen h-full px-12 xl:flex-row justify-around items-center sm:px-32 py-24 xl:px-32 ">
       <Toaster position="top-right" reverseOrder={false} />
       {/* Top text box */}
       <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 sm:text-left xl:w-1/2">
-        <span className="bg-buttonGradient rounded-lg px-4 py-1  w-max md:text-lg">
-          Contact us
+        <span className="bg-buttonGradient rounded-2xl px-4 py-1  w-max md:text-xl">
+          CONTACT US 
         </span>
         <h1 className="font-NordMedium text-2xl sm:text-4xl md:text-5xl">
           let's get in touch.
@@ -57,11 +40,11 @@ const ContactUs = () => {
           Or just reach out manually to{" "}
           <span className="text-[#9654F4] underline">shaids@gmail.com</span>
         </span>
-        <img
-          src="src/assets/images/mail.gif"
-          alt="img"
-          className="hidden xl:block size-3/4"
-        />
+         <Lottie
+           animationData={contact}
+           className="hidden xl:block size-3/4"
+          loop={true} 
+          /> 
       </div>
       {/* Form */}
       <div className="flex flex-col   w-full xl:w-1/3">
@@ -177,12 +160,11 @@ const ContactUs = () => {
               </p>
             )}
           </span>
-          <button
-            className=" bg-buttonGradient w-max px-4 py-1 rounded-lg self-end"
+
+          <input
             type="submit"
-          >
-            {loading ? <LoaderIcon /> : "Send"}
-          </button>
+            className=" bg-buttonGradient w-max px-4 py-1 rounded-lg self-end"
+          />
         </form>
       </div>
     </div>
