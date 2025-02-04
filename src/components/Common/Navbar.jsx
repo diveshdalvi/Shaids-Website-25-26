@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -6,31 +6,52 @@ import CloseIcon from "@mui/icons-material/Close";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup effect
+    };
+  }, [isOpen]);
+
   return (
-    <nav className="bg-transparent  py-3 ">
-      <div className="w-screen mx-auto  flex justify-between px-10 items-center">
+    <nav className="bg-transparent py-3 fixed z-50">
+      <div className="w-screen mx-auto flex justify-between px-10 items-center">
         {/* Logo */}
         <div className="text-2xl font-bold cursor-pointer text-white">
-          <img
-            src="./src/assets/images/logo.svg"
-            alt="logo"
-            className="w-12 h-12"
-          />
+          <Link to="/" className=" cursor-pointer">
+            <img
+              src="./src/assets/images/logo.svg"
+              alt="logo"
+              className="w-12 h-12"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-6 text-white cursor-pointer">
-          <li className="hover:text-purple-400">
-            <Link to="/">Home</Link>
+          <li className="hover:text-purple-400 cursor-pointer">
+            <Link to="/" className=" cursor-pointer">
+              Home
+            </Link>
           </li>
-          <li className="hover:text-purple-400">
-            <Link to="/achievements">Achievements</Link>
+          <li className="hover:text-purple-400 cursor-pointer">
+            <Link to="/achievements" className=" cursor-pointer">
+              Achievements
+            </Link>
           </li>
-          <li className="hover:text-purple-400">
-            <Link to="/team">Team</Link>
+          <li className="hover:text-purple-400 cursor-pointer">
+            <Link to="/team" className=" cursor-pointer">
+              Team
+            </Link>
           </li>
-          <li className="hover:text-purple-400">
-            <Link to="/contact-us">Contact</Link>
+          <li className="hover:text-purple-400 cursor-pointer">
+            <Link to="/contact-us" className=" cursor-pointer">
+              Contact
+            </Link>
           </li>
         </ul>
 
@@ -43,9 +64,9 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu with Sliding Animation */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-60 backdrop-blur-lg transform ${
+        className={`fixed inset-0 w-screen h-screen bg-black bg-opacity-60 backdrop-blur-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out flex flex-col items-center justify-center z-50`}
       >

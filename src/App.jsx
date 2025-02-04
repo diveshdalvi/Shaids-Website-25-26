@@ -5,18 +5,28 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./components/Common/Navbar";
 import ThreeBG from "./components/Home/ThreeBG";
 import Loader from "./components/Home/Loader";
+import MobileView from "./components/Home/MobileView";
 
 const App = () => {
   const [loading, setLoading] = useState(() => {
-    return localStorage.getItem("hasLoaded") ? false : true;
+    return sessionStorage.getItem("hasLoaded") ? false : true;
   });
 
   const [showMain, setShowMain] = useState(false);
-  const location = useLocation(); // Get the current route
+  
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!loading) {
-      // Delay main content rendering by 600ms after loader disappears
       const timeout = setTimeout(() => setShowMain(true), 600);
       return () => clearTimeout(timeout);
     }
@@ -24,8 +34,7 @@ const App = () => {
 
   useEffect(() => {
     if (loading) {
-      // Mark as loaded in localStorage to prevent showing loader again
-      localStorage.setItem("hasLoaded", "true");
+      sessionStorage.setItem("hasLoaded", "true");
     }
   }, [loading]);
 
@@ -36,8 +45,17 @@ const App = () => {
       ) : (
         showMain && (
           <div>
-            <Navbar />
-            <ThreeBG setLoading={setLoading} />
+            {isMobile ? (
+              <>
+                <Navbar />
+                <MobileView />
+              </>
+            ) : (
+              <>
+                <Navbar />
+                <ThreeBG setLoading={setLoading} />
+              </>
+            )}
           </div>
         )
       )}
