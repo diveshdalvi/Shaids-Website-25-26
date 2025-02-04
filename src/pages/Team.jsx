@@ -44,7 +44,7 @@ const Team = () => {
           </div>
         </div>
         {/* Team Members Grid (Now Properly Aligned) */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 gap">
           {teamMembers.map((member, index) => (
             <MemberCard
               key={index}

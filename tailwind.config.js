@@ -18,6 +18,20 @@ export default {
           "linear-gradient(180deg, #8133F1 0%, #5C37B6 34.5%, rgba(68, 32, 134, 0.85) 71.5%, #341068 89.5%)",
       },
     },
+    animation: {
+      "star-movement-bottom": "star-movement-bottom linear infinite alternate",
+      "star-movement-top": "star-movement-top linear infinite alternate",
+    },
+    keyframes: {
+      "star-movement-bottom": {
+        "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+        "100%": { transform: "translate(-100%, 0%)", opacity: "0" },
+      },
+      "star-movement-top": {
+        "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+        "100%": { transform: "translate(100%, 0%)", opacity: "0" },
+      },
+    },
   },
 
   // plugins: [require("@tailwindcss/line-clamp")],

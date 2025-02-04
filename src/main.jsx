@@ -8,6 +8,8 @@ import Technitude from "./pages/Technitude.jsx";
 import Milestone from "./pages/Milestone.jsx";
 import Wrkshop from "./pages/Wrkshop.jsx";
 import Faculty from "./pages/Faculty.jsx";
+import Credits from "./pages/Credits.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,6 +24,8 @@ createRoot(document.getElementById("root")).render(
         <Route path="/milestone" element={<Milestone />} />
         <Route path="/workshop" element={<Wrkshop />} />
         <Route path="/faculty" element={<Faculty />} />
+        <Route path="/credits" element={<Credits />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

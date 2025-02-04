@@ -7,6 +7,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import Navbar from "../components/Common/Navbar";
+import axios from "axios";
 
 const ContactUs = () => {
   const {
@@ -19,13 +20,27 @@ const ContactUs = () => {
   const [loadinng, setLoading] = useState(false);
   const [messageLength, setMessageLength] = useState(0);
   const maxLength = 300;
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setLoading(true);
-    // preventDefault();
-    reset();
-    toast.success("Sent Successfully!");
+    // console.log(data);
+    try {
+      const email = data.email;
+      const fullName = data.fullName;
+      const phoneNumber = data.phoneNumber;
+      const Message = data.Message;
+      await axios.post(
+        import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api/contact",
+        { fullName, email, phoneNumber, Message }
+      );
+      reset();
+      toast.success("Sent Successfully!");
+    } catch (e) {
+      console.log(e);
+      toast.error("Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
-
   return (
     <>
       <Navbar />
