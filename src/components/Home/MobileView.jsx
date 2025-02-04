@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 // import assets from "../";
 import Grid from "../Home/Cards";
 import assets from "../../assets/asset";
-import StarBorder from "./Starborder";
+// import StarBorder from "./Starborder";
 const MobileView = () => {
   const [showLoopVideo, setShowLoopVideo] = useState(false);
   const [showDiscoverInVideo, setShowDiscoverInVideo] = useState(false);
@@ -82,22 +82,22 @@ const MobileView = () => {
         />
 
         {showButton && (
-          // <button
-          //   onClick={handleDiscoverClick}
-          //   className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[40px] z-10
-          //     px-6 py-2 bg-white text-black rounded-full hover:bg-opacity-90
-          //     transition-opacity duration-500 ease-in-out ${buttonOpacity}`}
-          // >
-          //   CLICK
-          // </button>
-          <StarBorder
-            as="button"
-            className="custom-class"
-            color="cyan"
-            speed="5s"
+          <button
+            onClick={handleDiscoverClick}
+            className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[40px] z-10
+              px-6 py-2 bg-white text-black rounded-full hover:bg-opacity-90
+              transition-opacity duration-500 ease-in-out ${buttonOpacity}`}
           >
-            Click here
-          </StarBorder>
+            CLICK
+          </button>
+          // <StarBorder
+          //   as="button"
+          //   className="custom-class"
+          //   color="cyan"
+          //   speed="5s"
+          // >
+          //   Click here
+          // </StarBorder>
         )}
 
         <video
