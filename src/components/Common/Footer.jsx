@@ -1,4 +1,5 @@
 import { Instagram, GitHub, LinkedIn } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -42,7 +43,8 @@ const Footer = () => {
       </div>
       
       {/* Bottom Section */}
-      <div className="py-2 text-center">
+      <div className="py-2 text-center flex-col">
+        <Link to="/credits">Our Developers!</Link>
         <p className="text-xs font-Outfit">© 2025 DMCE SHAIDS. All rights reserved.</p>
       </div>
     </div>
