@@ -1,8 +1,13 @@
 {
   "name": "shaids-website",
+  "engines": {
+  "node": "18.x",
+  "npm":"9.x"
+},
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
