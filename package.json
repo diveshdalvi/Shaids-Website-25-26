@@ -1,16 +1,18 @@
 {
   "name": "shaids-website",
+  "homepage": "https://shaids-dmce.github.io/Shaids-Website-25-26/",
   "engines": {
-  "node": "22.8.0",
-  "npm":"10.8.2"
-},
+    "node": "22.8.0",
+    "npm": "10.8.2"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -47,8 +49,8 @@
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.1.1",
     "react-slick": "^0.30.3",
-    
     "react-three-fiber": "^6.0.13",
+    "shaids-website": "file:",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.14",
     "swiper": "^7.0.0",

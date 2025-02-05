@@ -39,7 +39,7 @@ const MemberCard = ({ name, designation, instagramUrl, linkedinUrl, avatar, load
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors cursor-pointer"
             >
               <InstagramIcon fontSize="small" />
             </a>
@@ -53,7 +53,7 @@ const MemberCard = ({ name, designation, instagramUrl, linkedinUrl, avatar, load
               href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors cursor-pointer"
             >
               <LinkedInIcon fontSize="small" />
             </a>
