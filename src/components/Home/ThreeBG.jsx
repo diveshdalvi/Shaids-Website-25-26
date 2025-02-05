@@ -32,7 +32,7 @@ const ThreeBG = ({ setLoading }) => {
       <div className="absolute bottom-0 right-0 bg-black w-40 h-20 z-20">
         <img
           className="ml-10 w-20 h-20"
-          src="src/assets/images/logo.svg"
+          src="src/assets/images/logo.png"
           alt="Logo"
         />
       </div>

@@ -36,7 +36,7 @@ export default function Loader({ onComplete }) {
       transition={{ duration: 1 }}
     >
       <motion.img
-        src="src\assets\images\logo.svg" // Update with your logo path
+        src="src\assets\images\logo.png"
         alt="Logo"
         className="w-24 h-24 mb-4"
         initial={{ scale: 0 }}

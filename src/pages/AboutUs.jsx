@@ -1,6 +1,6 @@
-import React from 'react';
-import { Bot, Users, Dumbbell, Palette } from 'lucide-react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import React from "react";
+import { Bot, Users, Dumbbell, Palette } from "lucide-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function AboutUS() {
   return (
@@ -9,26 +9,23 @@ function AboutUS() {
       <section className="container mx-auto px-4 py-20 flex items-center justify-between">
         <div className="max-w-xl">
           <h1 className="text-6xl font-bold mb-6">
-            A LITTLE<br />ABOUT SHAIDS
+            A LITTLE
+            <br />
+            ABOUT SHAIDS
           </h1>
           <p className="text-xl leading-relaxed">
-            Welcome to SHAIDS, the Student Hive for Artificial Intelligence and Data Science!
-            Founded in 2023, SHAIDS is a student-led initiative dedicated to building a vibrant
-            community passionate about AI and Data Science.
+            Welcome to SHAIDS, the Student Hive for Artificial Intelligence and
+            Data Science! Founded in 2023, SHAIDS is a student-led initiative
+            dedicated to building a vibrant community passionate about AI and
+            Data Science.
           </p>
         </div>
         <div className="hidden lg:block">
-        
-
-
- 
-    <DotLottieReact
-      src="https://lottie.host/3c5af9dd-5ed6-46b7-b58a-362963ca32c0/EtbiFCKYgr.lottie"
-      loop
-      autoplay
-    />
-  
-
+          <DotLottieReact
+            src="https://lottie.host/3c5af9dd-5ed6-46b7-b58a-362963ca32c0/EtbiFCKYgr.lottie"
+            loop
+            autoplay
+          />
         </div>
       </section>
 
@@ -38,15 +35,17 @@ function AboutUS() {
           <h2 className="text-4xl font-bold mb-8">OUR VISION</h2>
           <p className="text-2xl max-w-3xl mx-auto">
             At SHAIDS, we enhance college life with technical, cultural, and
-            sports activities, helping students develop skills, showcase creativity,
-            and grow holistically.
+            sports activities, helping students develop skills, showcase
+            creativity, and grow holistically.
           </p>
         </div>
       </section>
 
       {/* Explore Section */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-16">EXPLORE WITH US</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">
+          EXPLORE WITH US
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ExploreCard
             icon={<Bot className="w-12 h-12 text-[#4c2a9e]" />}
@@ -75,12 +74,11 @@ function AboutUS() {
       <section className="bg-[#4c2a9e] py-16">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="w-1/3">
-                <DotLottieReact
-            src="https://lottie.host/0066b891-36e4-4145-9f5e-eba692ff85a5/GyU5FJJsCk.lottie"
-            loop
-            autoplay
-          />
-  
+            <DotLottieReact
+              src="https://lottie.host/0066b891-36e4-4145-9f5e-eba692ff85a5/GyU5FJJsCk.lottie"
+              loop
+              autoplay
+            />
           </div>
           <div className="w-2/3 pl-12">
             <h2 className="text-4xl font-bold mb-6">
